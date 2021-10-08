@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://css.gg/battery.css' rel='stylesheet'>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>NARRU-Estado</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+   <!-- WRAPPER -->
+    <div class="wrapper">
+       <div class="section">
+            <div class="top_navbar">
+            <!--<div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div> -->
+            </div>
+            <div class="container">
+                <h1 id="tituloAjustes">Ajustes del HMI</h1>
+                <div style="margin-left: 50px;">
+                    <span><i class="fas fa-globe-americas"></i></span>
+                    <span id="ajusteIdioma" style="margin-left: 10px; margin-right: 60px; display: inline-block; width: 100px;">Idioma</span>
+                    <button id="botonEnglish" class="boton2">English</button>
+                    <button id="botonCastellano" class="boton2">Castellano</button>
+                    <button id="botonEuskara" class="boton2">Euskara</button>
+                </div>
+                <br>
+                <div style="margin-left: 50px;">
+                    <span><i class="fas fa-palette"></i></span>
+                    <span id="ajusteDiseño" style="margin-left: 10px; margin-right: 60px; display: inline-block; width: 100px;">Diseño</span>
+                    <button id="botonClaro" class="boton2">Claro</button>
+                    <button id="botonOscuro" class="boton2">Oscuro</button>
+                </div>
+                <br>
+                <div style="margin-left: 50px;">
+                    <span><i class="fas fa-users"></i></span>
+                    <span id="ajusteModo" style="margin-left: 10px; margin-right: 60px; display: inline-block; width: 100px;">Modo</span>
+                    <button id="modoUsuario" class="boton2">Usuario</button>
+                    <button id="modoIngeniero" class="boton2">Ingeniero</button>
+                    <span><i class="fas fa-user-shield"></i></span>
+                </div>
+                <br>
+                <div style="margin-left: 50px;">
+                    <span><i class="fas fa-map-marked-alt"></i></span>
+                    <span id="ajusteMapa" style="margin-left: 10px; margin-right: 60px; display: inline-block; width: 100px;">Mapa</span>
+                    <select name="select" class="select1" id="selectMapa">
+                        <option value="value1" selected="false">Map1.JPG</option>
+                        <option value="value2" selected="false">Map2.JPG</option>
+                        <option value="value3" selected="false">mapaNarru2.JPG</option>
+                    </select>
+                    <button id="botonCambioMapa" class="boton2" style="height: 50px;">Cambiar Mapa</button>
+                    <button id="botonCambioMapa" class="boton2" style="height: 50px;">Calibrar Mapa</button>
+                </div>
+                <br>
+                <div style="margin-left: 50px;">
+                    <span><i class="fas fa-server"></i></span>
+                    <span id="ajusteModo" style="margin-left: 10px; margin-right: 60px; display: inline-block; width: 160px;">Servidor OPC-UA</span>
+                    <span id="urlOPCUA" style="font-size: 14px;">-</span>
+                    <span id="estadoOPCUA" style="margin-left: 35px;font-size: 14px;">-</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="profile">
+                    <img src="images/nosotros_2.png" alt="profile_picture">
+                    <!-- <h3>CANVAS digital brain</h3> -->
+                </div>
+                <ul>
+                    <!-- <li>
+                        <a href="conexion.html">
+                            <span class="icon"><i class="fas fa-wifi"></i></span>
+                            <span class="item">Conexión</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="estado.html">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item" id="pestañaInicio">Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span class="item" id="pestañaMapa">Mapa</span>
+                        </a>
+                    </li>
+                    <li id="pantallaControl">
+                        <a href="control.html">
+                            <span class="icon"><i class="fas fa-hand-paper"></i></i></span>
+                            <span class="item" id="pestañaControl">Control</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="alarmas.html">
+                            <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+                            <span class="item" id="pestañaAlarmas">Alarmas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ajustes.html" class="active">
+                            <span class="icon"><i class="fas fa-cogs"></i></span>
+                            <span class="item" id="pestañaAjustes">Ajustes</span>
+                        </a>
+                    </li>
+                </ul>
+                <img src="images/logo-blanco-ceit.svg" alt="" width="50%" style="margin:50px;margin-top: 180px;">
+            </div>  
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <span style="margin-left: 10px;"><i class="fas fa-user-shield"></i></span>
+          <div class="title" id="autenticacionIngeniero">Autenticación requerida para pasar a Modo Ingeniero</div>
+          <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            <h2 style="margin-left:200px; margin-top:40px">LOGIN</h2>
+            <form action="POST">
+                <span><i class="fas fa-user"></i></span>
+                <label for="nombreUsuario"  style="margin-left: 10px; margin-right: 10px; margin-top: 50px; display: inline-block; width: 200px;" id="usuarioNombre">Nombre de Usuario</label>
+                <input id="nombreUsuario" type="text" style="padding: 5px;">
+                <br>
+                <span><i class="fas fa-unlock"></i></span>
+                <label for="contraseñaUsuario"  style="margin-left: 10px; margin-right: 10px;margin-top: 50px; display: inline-block; width: 200px;" id="usuarioContraseña">Contraseña</label>
+                <input id="contraseñaUsuario" type="password" style="padding: 5px;">
+                <br>
+                <button id="botonAceptarLogin" class="boton2" style="background-color: rgb(58, 77, 165);margin-left: 180px; margin-top: 60px;">ACEPTAR</button>
+            </form>
+        </div>
+        <div>
+            <img src="images/logo-blanco-ceit.svg" width="100px" style="margin-top: 70px;margin-left:850px;position: absolute;" alt="">
+        </div>
+        </div>
+      </div>
+    <div id="overlay"></div>
+ 
+    <script src="js/script1.js"></script>
+    <script src="js/script_ajustes.js"></script>
+</body>
+</html>

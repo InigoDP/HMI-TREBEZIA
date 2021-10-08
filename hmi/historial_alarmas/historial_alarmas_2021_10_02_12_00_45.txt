@@ -1,0 +1,2 @@
+2021-10-02 12:00:47: ERROR: Se ha perdido la conexión con el servidor OPC-UA
+2021-10-02 12:00:54: Reconectando con el servidor OPC-UA. Intento 2

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://css.gg/battery.css' rel='stylesheet'>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>NARRU-Estado</title>
+    <script src="https://unpkg.com/@mongodb-js/charts-embed-dom@beta"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+   <!-- WRAPPER -->
+    <div class="wrapper">
+       <div class="section">
+            <div class="top_navbar">
+            <!--<div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div> -->
+            </div>
+            <div class="container">
+                <button class="boton2" id="botonAtras"><i class="fas fa-chevron-left"></i></button>
+                <button class="boton2" id="botonFlota">FLOTA</button>
+                <button class="boton2" id="botonMOMA">MOMAs</button>
+                <button class="boton2" id="botonAMR">AMRs</button>
+                <button class="boton2" id="botonCOBOT">COBOTS</button>
+                <div id="estado1">
+                    <ul>
+                        <li class="moma" id="moma1"> 
+                            <div class="bottom">MOMA 1
+                                <span id="bateria">Batería: </span>
+                                <!-- <span class="icon"><i class="fas fa-battery-full" style="color: rgb(13, 175, 35)"></i></span> -->
+                                <span class="icon"><i class="fas fa-wifi" id="icono-wifi"></i></span>
+                            </div>
+                            <div class="robot_info">
+                                <img class="ldgray" id="robot1" src="images/MOMA.png" alt="">
+                                <div class="robot_status">
+                                    Estado Robot: <span id="estado">-</span>
+                                </div>
+                                <div class="robot_status">
+                                    Localización: <span id="localizacion">-</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="amr" id="amr2"> 
+                            <div class="bottom">AMR 2
+                                <span id="bateria">Batería: </span>
+                                <!-- <span class="icon"><i class="fas fa-battery-half" style="color: orange;"></i></span> -->
+                                <span class="icon"><i class="fas fa-wifi"></i></span>
+                            </div>
+                            <div class="robot_info">
+                                <img class="ldgray" src="images/Picture1.jpg" alt="">
+                                <div class="robot_status">
+                                    Estado Robot:
+                                </div>
+                                <div class="robot_status">
+                                    Localizacion:
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cobot" id="cobot2"> 
+                            <div class="bottom">Cobot 2
+                                <span id="bateria">Batería: </span>
+                                <!-- <span class="icon"><i class="fas fa-battery-half" style="color: orange;"></i></span> -->
+                                <span class="icon"><i class="fas fa-wifi"></i></span>
+                            </div>
+                            <div class="robot_info">
+                                <img class="ldgray" src="images/TM5.jpg" alt="">
+                                <div class="robot_status">
+                                    Estado Robot:
+                                </div>
+                                <div class="robot_status">
+                                    Localizacion:
+                                </div>
+                            </div>
+                        </li>
+                        <li class="amr" id="amr3"> 
+                            <div class="bottom">AMR 3
+                                <span id="bateria">Batería: </span>
+                                <!-- <span class="icon"><i class="fas fa-battery-half" style="color: orange;"></i></span> -->
+                                <span class="icon"><i class="fas fa-wifi"></i></span>
+                            </div>
+                            <div class="robot_info">
+                                <img class="ldgray" src="images/Picture1.jpg" alt="">
+                                <div class="robot_status">
+                                    Estado Robot:
+                                </div>
+                                <div class="robot_status">
+                                    Localizacion:
+                                </div>
+                            </div>
+                        </li>
+                        <li class="moma" id="moma2"> 
+                            <div class="bottom">MOMA 2
+                                <span id="bateria">Batería: </span>
+                                <!-- <span class="icon"><i class="fas fa-battery-full" style="color: rgb(13, 175, 35)"></i></span> -->
+                                <span class="icon"><i class="fas fa-wifi" id="icono-wifi"></i></span>
+                            </div>
+                            <div class="robot_info">
+                                <img class="ldgray" id="robot1" src="images/MOMA.png" alt="">
+                                <div class="robot_status">
+                                    Estado Robot: <span id="estado">-</span>
+                                </div>
+                                <div class="robot_status">
+                                    Localización: <span id="localizacion">-</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="robot_info"> 
+
+                        </li>
+                        <li class="robot_info">  
+
+                        </li>
+                        <li class="robot_info"> 
+
+                        </li>
+                        <li class="robot_info"> 
+
+                        </li>
+                        <li class="robot_info"> 
+
+                        </li>
+                        <li class="robot_info"> 
+
+                        </li>
+                        <li class="robot_info"> 
+
+                        </li>
+                    </ul>
+                </div>
+                <div id="moma1Partes">
+                <ul>
+                    <li id="amr1"> 
+                        <div class="bottom">AMR 1
+                            <span id="bateria">Batería: </span>
+                            <!-- <span class="icon"><i class="fas fa-battery-full" style="color: rgb(13, 175, 35)"></i></span> -->
+                            <span class="icon"><i class="fas fa-wifi" id="icono-wifi"></i></span>
+                        </div>
+                        <div class="robot_info">
+                            <img class="ldgreen" id="robot1" src="images/AMR_Circular.svg" alt="">
+                            <div class="robot_status">
+                                Estado Robot: <span id="estado">-</span>
+                            </div>
+                            <div class="robot_status">
+                                Localización: <span id="localizacion">-</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="cobot1"> 
+                        <div class="bottom">Cobot 1
+                            <span id="bateria">Batería: </span>
+                            <!-- <span class="icon"><i class="fas fa-battery-half" style="color: orange;"></i></span> -->
+                            <span class="icon"><i class="fas fa-wifi"></i></span>
+                        </div>
+                        <div class="robot_info">
+                            <img class="ldgray" src="images/TM5.jpg" alt="">
+                            <div class="robot_status">
+                                Estado Robot:
+                            </div>
+                            <div class="robot_status">
+                                Localizacion:
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <div id="chart"></div> -->
+                <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="900" height="300" src="https://charts.mongodb.com/charts-project-0-xzfjn/embed/charts?id=180f8fba-248a-4f1b-983b-e68a565dc7b3&autoRefresh=10&theme=light"></iframe>
+                <!-- <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-xzfjn/embed/charts?id=180f8fba-248a-4f1b-983b-e68a565dc7b3&theme=light"></iframe> -->
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="profile">
+                    <img src="images/nosotros_2.png" alt="profile_picture">
+                    <!-- <h3>CANVAS digital brain</h3> -->
+                </div>
+                <ul>
+                    <!-- <li>
+                        <a href="conexion.html">
+                            <span class="icon"><i class="fas fa-wifi"></i></span>
+                            <span class="item">Conexión</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="estado.html" class="active">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item" id="pestañaInicio">Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span class="item" id="pestañaMapa">Mapa</span>
+                        </a>
+                    </li>
+                    <li id="pantallaControl">
+                        <a href="control.html">
+                            <span class="icon"><i class="fas fa-hand-paper"></i></i></span>
+                            <span class="item" id="pestañaControl">Control</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="alarmas.html">
+                            <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+                            <span class="item" id="pestañaAlarmas">Alarmas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ajustes.html">
+                            <span class="icon"><i class="fas fa-cogs"></i></span>
+                            <span class="item" id="pestañaAjustes">Ajustes</span>
+                        </a>
+                    </li>
+                </ul>
+                <img src="images/logo-blanco-ceit.svg" alt="" width="50%" style="margin:50px;margin-top: 180px;">
+            </div>  
+        </div>
+    </div>
+ 
+    <script src="js/script1.js"></script>
+    <script type="" src="js/script_estado.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://css.gg/battery.css' rel='stylesheet'>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>NARRU-Estado</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+   <!-- WRAPPER -->
+    <div class="wrapper">
+       <div class="section">
+            <div class="top_navbar">
+            <!--<div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div> -->
+            </div>
+            <div class="container">
+
+            </div>
+            <div class="sidebar">
+                <div class="profile">
+                    <img src="images/nosotros_2.png" alt="profile_picture">
+                    <!-- <h3>CANVAS digital brain</h3> -->
+                </div>
+                <ul>
+                    <!-- <li>
+                        <a href="conexion.html">
+                            <span class="icon"><i class="fas fa-wifi"></i></span>
+                            <span class="item">Conexión</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="estado.html">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item" id="pestañaInicio">Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span class="item" id="pestañaMapa">Mapa</span>
+                        </a>
+                    </li>
+                    <li id="pantallaControl">
+                        <a href="control.html" class="active">
+                            <span class="icon"><i class="fas fa-hand-paper"></i></i></span>
+                            <span class="item" id="pestañaControl">Control</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="alarmas.html">
+                            <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
+                            <span class="item" id="pestañaAlarmas">Alarmas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ajustes.html" >
+                            <span class="icon"><i class="fas fa-cogs"></i></span>
+                            <span class="item" id="pestañaAjustes">Ajustes</span>
+                        </a>
+                    </li>
+                </ul>
+                <img src="images/logo-blanco-ceit.svg" alt="" width="50%" style="margin:50px;margin-top: 180px;">
+            </div>  
+        </div>
+    </div>
+
+      </div>
+    <div id="overlay"></div>
+ 
+    <script src="js/script1.js"></script>
+    <script src="js/script_ajustes.js"></script>
+</body>
+</html>
