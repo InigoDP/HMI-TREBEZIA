@@ -1,0 +1,5 @@
+2021-10-06 12:02:59: Comunicando con el servidor OPC-UA con la url opc.tcp://10.62.32.112:48010
+2021-10-06 12:03:15: ERROR: Se ha perdido la conexión con el servidor OPC-UA
+2021-10-06 12:03:16: Reconectando con el servidor OPC-UA. Intento 2
+2021-10-06 12:03:19: Reconectando con el servidor OPC-UA. Intento 3
+2021-10-06 12:03:44: Reconectando con el servidor OPC-UA. Intento 4

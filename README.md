@@ -4,6 +4,10 @@ Personal Token: xUvyKJ4dYaLypXQ5FMyL
 
 # Web-based user interface for the MOMA control using the OPC-UA Protocol. HMI used in the C2M2 project.
 
+
+
+# How to run the application
+
 Once the project is downloaded or cloned using git, make sure you have already installed node.JS and npm in your PC.
 
 If so, install all the dependencies using the following command in the root of the project:

@@ -1,0 +1,19 @@
+2021-10-05 13:36:29: Comunicando con el servidor OPC-UA con la url opc.tcp://192.168.100.128:54841
+2021-10-05 13:36:49: Comunicando con el servidor OPC-UA con la url opc.tcp://192.168.100.128:54841
+2021-10-05 13:37:09: Comunicando con el servidor OPC-UA con la url opc.tcp://192.168.100.128:54841
+2021-10-05 13:37:29: Comunicando con el servidor OPC-UA con la url opc.tcp://192.168.100.128:54841
+2021-10-05 13:37:49: Comunicando con el servidor OPC-UA con la url opc.tcp://192.168.100.128:54841
+2021-10-05 13:38:09: Comunicando con el servidor OPC-UA con la url opc.tcp://192.168.100.128:54841
+2021-10-05 14:55:34: ERROR: Se ha perdido la conexión con el servidor OPC-UA
+2021-10-05 14:55:35: Reconectando con el servidor OPC-UA. Intento 2
+2021-10-05 14:55:37: Reconectando con el servidor OPC-UA. Intento 3
+2021-10-05 14:55:41: Reconectando con el servidor OPC-UA. Intento 4
+2021-10-05 14:55:49: Reconectando con el servidor OPC-UA. Intento 5
+2021-10-05 14:56:05: Reconectando con el servidor OPC-UA. Intento 6
+2021-10-05 14:56:25: Reconectando con el servidor OPC-UA. Intento 7
+2021-10-05 14:56:45: Reconectando con el servidor OPC-UA. Intento 8
+2021-10-05 14:57:05: Reconectando con el servidor OPC-UA. Intento 9
+2021-10-05 14:57:25: Reconectando con el servidor OPC-UA. Intento 10
+2021-10-05 14:58:06: Reconectando con el servidor OPC-UA. Intento 11
+2021-10-05 14:58:47: Reconectando con el servidor OPC-UA. Intento 12
+2021-10-05 14:59:28: Reconectando con el servidor OPC-UA. Intento 13

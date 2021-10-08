@@ -1,0 +1,2 @@
+2021-10-06 08:19:45: ERROR: Se ha perdido la conexión con el servidor OPC-UA
+2021-10-06 08:20:06: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
