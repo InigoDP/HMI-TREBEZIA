@@ -1,2 +1,0 @@
-2021-10-05 13:08:25: Comunicando con el servidor OPC-UA con la url opc.tcp://192.168.100.128:54841
-2021-10-05 13:08:45: Comunicando con el servidor OPC-UA con la url opc.tcp://192.168.100.128:54841

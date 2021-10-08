@@ -1,1 +1,0 @@
-2021-10-08 10:38:33: ERROR: Se ha perdido la conexión con el servidor OPC-UA

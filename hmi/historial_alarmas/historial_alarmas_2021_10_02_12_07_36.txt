@@ -1,9 +1,0 @@
-2021-10-02 12:07:56: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
-2021-10-02 12:08:16: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
-2021-10-02 12:08:36: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
-2021-10-02 12:08:56: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
-2021-10-02 12:09:16: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
-2021-10-02 12:09:36: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
-2021-10-02 12:09:56: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
-2021-10-02 12:10:16: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
-2021-10-02 12:10:36: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010

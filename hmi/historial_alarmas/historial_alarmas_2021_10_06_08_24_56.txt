@@ -1,1 +1,0 @@
-2021-10-06 08:25:16: Comunicando con el servidor OPC-UA con la url opc.tcp://LAPTOP-P2F2VSD7:48010
