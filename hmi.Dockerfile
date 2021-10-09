@@ -26,14 +26,14 @@ WORKDIR /usr/src/app
 
 #We clone the files located in the C2M2 remotehmi repository
 
-RUN git clone https://A904983:XwWEBuGR6VMztocJRsoH@git.unav.edu/vision-robotica/C2M2/trebezia.git
+RUN git clone https://A904983:xUvyKJ4dYaLypXQ5FMyL@git.unav.edu/vision-robotica/C2M2/remotehmi.git
 
-WORKDIR /usr/src/app/trebezia/hmi
+WORKDIR /usr/src/app/remotehmi
 
 #As the node_modules are not cloned, with NPM we install all the dependencies required by the app
 
 RUN npm install
 
-# EXPOSE 5640
+EXPOSE 5640
 
-# CMD ["npm", "start"]
+CMD ["npm", "start"]
