@@ -25,6 +25,8 @@ A web server will be created in your localhost. Access it typing localhost:5640 
 The application will create an OPC-UA client using the specified URL and will provide a user interface (or HMI) 
 to interact with the Mobile Manipulator.
 
+# DOCKER
+
 You can also run the app using DOCKER. This alternative does not require a previous installation of node.JS and npm.
 Download or clone the file named hmi.Dockerfile and build an image from it. Once the image is built, you can 
 create a container to run the app inside this container using Docker. Follow the steps indicated it that file.
