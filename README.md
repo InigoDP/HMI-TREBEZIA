@@ -5,8 +5,8 @@ Personal Token: xUvyKJ4dYaLypXQ5FMyL
 ## Web-based user interface for the MOMA control using the OPC-UA Protocol. HMI used in the C2M2 project.
 
 The user interface has been developed using the web-standards HTML5, CSS and JS. All these files are 
-included in the public folder. For the backend code, a Node.JS environment has been used to use the
-same programming language has in the frontend (JavaScript). The app.js file includes all these backend
+included in the **public** folder. For the backend code, a Node.JS environment has been used to use the
+same programming language has in the frontend (JavaScript). The **app.js** file includes all these backend
 code, where the OPC-UA client is created.
 
 ## How to run the application
@@ -17,8 +17,8 @@ If so, install all the dependencies using the following command in the root of t
 ```
 npm install
 ```
-A folder named node_modules will be created in the project, which includes all the dependencies of the application 
-(npm reads the package.json file, where all dependencies all listed).
+A folder named **node_modules** will be created in the project, which includes all the dependencies of the application 
+(npm reads the **package.json** file, where all dependencies all listed).
 
 To run the app locally, use the following command in the terminal:
 ```
@@ -31,13 +31,13 @@ to interact with the Mobile Manipulator formed by a Mobile Robot (Omron LD90) an
 
 ## DOCKER
 
-You can also run the app using DOCKER. Download or clone the file named hmi.Dockerfile and build an image from it. 
+You can also run the app using DOCKER. Download or clone the file named **hmi.Dockerfile** and build an image from it. 
 Once the image is built, you can create a container to run the app inside this container using Docker. Follow the 
 steps indicated it that file.
 
 ## CONFIGURE THE APP
 
-The application can be configured to change some of its characteristics. Inside the config folder, an Excel file
-provides all the necessary information related to the OPC-UA server, such as the URL and the nodes to be controlled.
-When the app.js is run, the excel file is read before creating the OPC-UA Client, so you can easily change the 
-excel file to modify some of these aspects.
+The application can be configured to change some of its characteristics. Inside the **config** folder, an Excel file
+(**variablesOPC.xlsx**) provides all the necessary information related to the OPC-UA server, such as the URL and the 
+nodes to be controlled. When the app.js is run, the excel file is read before creating the OPC-UA Client, so you can 
+easily change the excel file to modify some of these aspects.
