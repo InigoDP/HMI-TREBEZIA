@@ -15,14 +15,14 @@ Once the project is downloaded or cloned using git, make sure you have already i
 
 If so, install all the dependencies using the following command in the root of the project:
 
-    `npm install`
+'npm install'
 
 A folder named node_modules will be created in the project, which includes all the dependencies of the application 
 (npm reads the package.json file, where all dependencies all listed).
 
 To run the app locally, use the following command in the terminal:
 
-    `node app.js`
+    'node app.js'
 
 A web server will be created in your localhost. Access it typing localhost:5640 in your preferred web-browser.
 
